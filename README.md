@@ -71,8 +71,16 @@ cd ./data
 
 
 ## Training
+1. Install the desired version of DeepSpeed.
 
-Install your desired deepspeed version and run train.sh
+2. Update the train.sh script:
+    Replace the --data_path argument with one of the following options, depending on your training task:
+        lambda_bs_train.json
+        lambda_combine_train.json
+        lambda_cs_train.json
+        
+3. If you're training on your own dataset, create a train.json file. Each entry should contain an id and a conversation. You can use lambda_bs_train.json as a reference for formatting.
+
 
 ```shell
 bash train.sh
